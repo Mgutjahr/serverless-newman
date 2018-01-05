@@ -6,12 +6,20 @@ First, install all node dependencies
 ```sh
 npm install
 ```
+Make sure to have the serverless framework installed. 
 
-Next, make sure to have the serverless framework installed and deploy the project with
-
+## Deployment 
+Deploy the serverless project with
 ```sh
- serverless deploy function --region eu-central-1 --stage design
+ serverless deploy function
 ```
+
+You can invoke the function and validate if everything works with 
+```
+serverless invoke -f run-newman-test
+```
+
+The lambda should return `"Test run passed!"` if everything works as expected. (The project executed the test collection available in `/testsuites` in newman and all tests passed)
 
 ## Configuration
 The project uses the [node config module](https://github.com/lorenwest/node-config) for configuration. Hence, check out `default.json` for default config options and `custom-environment-variables.json` for available environment variables. 
