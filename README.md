@@ -11,7 +11,7 @@ Make sure to have the serverless framework installed.
 ## Deployment 
 Deploy the serverless project with
 ```sh
- serverless deploy function
+ serverless deploy
 ```
 
 You can invoke the function and validate if everything works with 
