@@ -1,0 +1,6 @@
+{
+    "testEnvironmentVariables": {
+        "myEnvVar": "Test environment variable"
+    },
+    "logLevel": "info"
+}

@@ -1,0 +1,13 @@
+service: serverless-newman
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+
+functions:
+  run-newman-test:
+    handler: handler.runNewmanTest
+    timeout: 300
+    memorySize: 512
+    environment: 
+      TEST_SUITE: testsuites/test.postman_collection.json

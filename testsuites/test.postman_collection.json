@@ -1,0 +1,58 @@
+{
+	"info": {
+		"name": "test",
+		"_postman_id": "b2447a16-d50e-7d7a-bdf4-875f58b588ac",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "test request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a60e2047-074e-478d-80c8-05f5aa086b5c",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Should return the value from environment testKey\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.args.testKey).to.eql(\"Test environment variable\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://httpbin.org/get?testKey={{myEnvVar}}",
+					"protocol": "http",
+					"host": [
+						"httpbin",
+						"org"
+					],
+					"path": [
+						"get"
+					],
+					"query": [
+						{
+							"key": "testKey",
+							"value": "{{myEnvVar}}",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "crepo-post-deployment-tests",
+  "version": "1.0.0",
+  "description": "Collection of Postman tests which are executed after an deployment to verify system health.",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redbullmediahouse/crepo-post-deployment-tests.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/redbullmediahouse/crepo-post-deployment-tests/issues"
+  },
+  "homepage": "https://github.com/redbullmediahouse/crepo-post-deployment-tests#readme",
+  "dependencies": {
+    "config": "^1.29.0",
+    "newman": "^3.9.1",
+    "newman-reporter-winston": "https://github.com/Mgutjahr/newman-reporter-winston/tarball/master",
+    "uuid": "^3.1.0",
+    "winston": "^2.4.0"
+  }
+}
